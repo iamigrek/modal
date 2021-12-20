@@ -1,0 +1,85 @@
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background-color: rgb(253, 251, 255);
+	font-size: 20px;
+	font-family: cursive;
+	color: rgb(0, 56, 56);
+	overflow-x: hidden;
+	overflow-y: scroll;
+}
+
+.container {
+	max-width: 900px;
+	margin: 0 auto;
+	padding: 0 15px;
+}
+
+
+.modal {
+	height: 800px
+}
+
+.modal__btn {
+	padding: 15px;
+	font-size: 25px;
+	text-transform: uppercase;
+	font-family: cursive;
+	cursor: pointer;
+	background-color: transparent;
+	border: 2px solid teal;
+	color: teal;
+	transition: color .2s ease, background-color .2s ease;
+}
+
+.modal__btns {
+	width: fit-content;
+	margin: 0 auto;
+}
+
+.modal__btn:hover {
+	color: white;
+	background-color: teal;
+}
+
+.modal__wrapper {
+	background-color: rgba(0, 0, 0, .7);
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	visibility: hidden;
+	opacity: 0;
+	transition: opacity .3s ease, visibility .3s ease;
+	z-index: 100;
+}
+
+.modal__window {
+	background-color: white;
+	padding: 30px;
+	max-width: 600px;
+	transform: scale(0.5, 0.5);
+	opacity: 0;
+	transition: transform .1s ease, opacity .1s ease;
+}
+
+
+/* Стили для отображения модального окна */
+.is-visible {
+	visibility: visible;
+	opacity: 1;
+}
+
+.is-visible div {
+	transform: scale(1, 1);
+	opacity: 1;
+}
